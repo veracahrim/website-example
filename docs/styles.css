@@ -28,6 +28,12 @@ nav a {
     text-decoration: none;
     font-family: Calibri, sans-serif;
     font-weight: bold;
+    color: #FFF3E2;
+}
+
+.svg {
+    stroke: #FFF3E2;
+    fill: #FFF3E2;
 }
 
 main {
@@ -116,14 +122,19 @@ nav {
     gap: 1em;
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
+.sticky  {
     position: fixed;
     top: 0;
 }
+
+.sticky a {
+    color: black;
+}
+
 .sticky + .wrapper {
     padding-top: 90vh;
 }
+
 /*
 #FFC5C8
 #302A3A
