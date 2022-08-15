@@ -1,0 +1,83 @@
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+    <main>
+        <div id="navref"></div>
+        <nav>
+            <a href="#home" style="margin-left: 3em">
+                <img src="assets/home.svg" alt="home"/>
+                <span>HOME</span>
+            </a>
+            <a href="#profile">
+                <img src="assets/profile.svg" alt="profil"/>
+                <span>PROFIL</span>
+            </a>
+            <a href="#cv">
+                <img src="assets/cv.svg" alt="cv"/>
+                <span>CV</span>
+            </a>
+            <a href="#portfolio">
+                <img src="assets/portfolio.svg" alt="portfolio"/>
+                <span>PORTFOLIO</span>
+            </a>
+            <a href="#contact">
+                <img src="assets/contact.svg" alt="kontakt"/>
+                <span>KONTAKT</span>
+            </a>
+        </nav>
+        <section id="home">
+            <h1>Webdesign Example</h1>
+            <div class="flex-spacer"></div>
+        </section>
+        <section id="profile">
+            <h1>Profil</h1>
+        </section>
+        <div class="parallax-container">
+            <div id="second-parallax" class="parallax-image"></div>
+        </div>
+        <section id="cv">
+            <h1>Curriculum Vitae</h1>
+        </section>
+        <div class="parallax-container">
+            <div id="third-parallax" class="parallax-image"></div>
+        </div>
+        <section id="portfolio">
+            <h1>Portfolio</h1>
+        </section>
+        <div class="parallax-container">
+            <div id="fourth-parallax" class="parallax-image"></div>
+        </div>
+        <section id="contact">
+            <h1>Kontakt</h1>
+        </section>
+    </main>
+</div>
+<script>
+    let offset
+    window.addEventListener('scroll', () => {
+        let parallaxContainers = document.getElementsByClassName('parallax-container');
+        for(let container of parallaxContainers) {
+            let yPos = container.getBoundingClientRect().top
+            let height = container.clientHeight
+            let child = container.children[0]
+            child.style.height = window.innerHeight + height;
+            child.style.top = yPos / 2;
+        }
+        let nav = document.getElementsByTagName("nav")[0];
+        let navref = document.getElementById('navref')
+
+        if (window.scrollY > navref.offsetTop) {
+            offset = window.scrollY
+            nav.classList.add("sticky");
+        } else {
+            nav.classList.remove("sticky");
+        }
+    })
+</script>
+</body>
