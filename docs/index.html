@@ -1,102 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
 <head>
+    <link href="flip.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
-
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="UTF-8"/>
 </head>
-<body>
-<div class="wrapper">
+<body>    <nav id="small-screen-nav">
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+        <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/>
+    </svg>
+    <a href="#home" class="small-nav-option">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"/>
+        </svg>
+        <span>HOME</span>
+    </a>
+    <a href="#profile" class="small-nav-option">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
+        </svg>
+        <span>PROFIL</span>
+    </a>
+    <a href="#cv" class="small-nav-option">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M24 28q1.65 0 2.825-1.175Q28 25.65 28 24q0-1.65-1.175-2.825Q25.65 20 24 20q-1.65 0-2.825 1.175Q20 22.35 20 24q0 1.65 1.175 2.825Q22.35 28 24 28Zm-8 8h16v-1.15q0-1.2-.65-2.2-.65-1-1.8-1.5-1.3-.55-2.675-.85Q25.5 30 24 30t-2.875.3q-1.375.3-2.675.85-1.15.5-1.8 1.5-.65 1-.65 2.2Zm21 8H11q-1.2 0-2.1-.9Q8 42.2 8 41V7q0-1.2.9-2.1Q9.8 4 11 4h17.05L40 15.95V41q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3V17.3L26.7 7H11v34Zm-26 0V7v34Z"/>
+        </svg>
+        <span>CV</span>
+    </a>
+    <a href="#portfolio" class="small-nav-option">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M7 40q-1.15 0-2.075-.925Q4 38.15 4 37V11q0-1.15.925-2.075Q5.85 8 7 8h14.05l3 3H41q1.15 0 2.075.925Q44 12.85 44 14H22.75l-3-3H7v26l5.1-20H47l-5.35 20.7q-.3 1.2-1.1 1.75T38.5 40Zm3.15-3h28.6l4.2-17h-28.6Zm0 0 4.2-17-4.2 17ZM7 14v-3 3Z"/>
+        </svg>
+        <span>PORTFOLIO</span>
+    </a>
+    <a href="#contact" class="small-nav-option">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/>
+        </svg>
+        <span>KONTAKT</span>
+    </a>
+</nav>
+<div id="navref"></div>
+<nav id="main-nav" >
+    <a href="#home">
+        <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"/>
+        </svg>
+        <span>HOME</span>
+    </a>
+    <a href="#profile">
+        <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
+        </svg>
+        <span>PROFIL</span>
+    </a>
+    <a href="#cv">
+        <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M24 28q1.65 0 2.825-1.175Q28 25.65 28 24q0-1.65-1.175-2.825Q25.65 20 24 20q-1.65 0-2.825 1.175Q20 22.35 20 24q0 1.65 1.175 2.825Q22.35 28 24 28Zm-8 8h16v-1.15q0-1.2-.65-2.2-.65-1-1.8-1.5-1.3-.55-2.675-.85Q25.5 30 24 30t-2.875.3q-1.375.3-2.675.85-1.15.5-1.8 1.5-.65 1-.65 2.2Zm21 8H11q-1.2 0-2.1-.9Q8 42.2 8 41V7q0-1.2.9-2.1Q9.8 4 11 4h17.05L40 15.95V41q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3V17.3L26.7 7H11v34Zm-26 0V7v34Z"/>
+        </svg>
+        <span>CV</span>
+    </a>
+    <a href="#portfolio">
+        <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M7 40q-1.15 0-2.075-.925Q4 38.15 4 37V11q0-1.15.925-2.075Q5.85 8 7 8h14.05l3 3H41q1.15 0 2.075.925Q44 12.85 44 14H22.75l-3-3H7v26l5.1-20H47l-5.35 20.7q-.3 1.2-1.1 1.75T38.5 40Zm3.15-3h28.6l4.2-17h-28.6Zm0 0 4.2-17-4.2 17ZM7 14v-3 3Z"/>
+        </svg>
+        <span>PORTFOLIO</span>
+    </a>
+    <a href="#contact">
+        <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/>
+        </svg>
+        <span>KONTAKT</span>
+    </a>
+</nav>
+<div class="not-body">
+
+    <div class="home-parallax-container">
+        <div id="first" class="home-parallax"></div>
+        <div id="second" class="home-parallax"></div>
+        <div id="third" class="home-parallax"></div>
+        <h1 id="title" class="home-parallax">Webdesign Example</h1>
+        <div id="fourth" class="home-parallax"></div>
+        <div id="fifth" class="home-parallax"></div>
+        <div id="sixth" class="home-parallax"></div>
+        <div id="seventh" class="home-parallax"></div>
+        <div id="eighth" class="home-parallax"></div>
+    </div>
+
+    <div class="credits">
+        <a href="https://pixabay.com/users/moinzon-2433302/">© Image by Moinzon</a>
+    </div>
     <main>
-        <div id="navref"></div>
-        <nav>
-            <a href="#home" style="margin-left: 3em">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"/>
-                </svg>
-                <span>HOME</span>
-            </a>
-            <a href="#profile">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
-                </svg>
-                <span>PROFIL</span>
-            </a>
-            <a href="#cv">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M24 28q1.65 0 2.825-1.175Q28 25.65 28 24q0-1.65-1.175-2.825Q25.65 20 24 20q-1.65 0-2.825 1.175Q20 22.35 20 24q0 1.65 1.175 2.825Q22.35 28 24 28Zm-8 8h16v-1.15q0-1.2-.65-2.2-.65-1-1.8-1.5-1.3-.55-2.675-.85Q25.5 30 24 30t-2.875.3q-1.375.3-2.675.85-1.15.5-1.8 1.5-.65 1-.65 2.2Zm21 8H11q-1.2 0-2.1-.9Q8 42.2 8 41V7q0-1.2.9-2.1Q9.8 4 11 4h17.05L40 15.95V41q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3V17.3L26.7 7H11v34Zm-26 0V7v34Z"/>
-                </svg>
-                <span>CV</span>
-            </a>
-            <a href="#portfolio">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M7 40q-1.15 0-2.075-.925Q4 38.15 4 37V11q0-1.15.925-2.075Q5.85 8 7 8h14.05l3 3H41q1.15 0 2.075.925Q44 12.85 44 14H22.75l-3-3H7v26l5.1-20H47l-5.35 20.7q-.3 1.2-1.1 1.75T38.5 40Zm3.15-3h28.6l4.2-17h-28.6Zm0 0 4.2-17-4.2 17ZM7 14v-3 3Z"/>
-                </svg>
-                <span>PORTFOLIO</span>
-            </a>
-            <a href="#contact">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/>
-                </svg>
-                <span>KONTAKT</span>
-            </a>
-        </nav>
         <section id="home">
-            <h1>Webdesign Example</h1>
-            <div class="flex-spacer"></div>
+            <div class="home-content">
+                <div class="flex-spacer"></div>
+                <div class="flex-spacer"></div>
+                <div class="flex-spacer"></div>
+                <div class="flex-spacer"></div>
+            </div>
         </section>
         <section id="profile">
             <h1>Profil</h1>
+            <img src="assets/website-gradient-small.jpg" alt="profilbild">
+            <p>Begeisterter Software Entwickler mit Liebe zum Detail.</p>
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="icon-container">
+                    <img src="assets/angular.svg" alt="angular">
+                    <img src="assets/typescript.svg" alt="angular">
+                    <img src="assets/javascript.svg" alt="angular">
+                    <img src="assets/html.svg" alt="angular">
+                    <img src="assets/css.svg" alt="angular">
+                    <img src="assets/photoshop.svg" alt="angular">
+                    <img src="assets/intellij.svg" alt="angular">
+                    <img src="assets/git.svg" alt="angular">
+                    <img src="assets/c-sharp.svg" alt="angular">
+                    <img src="assets/steam.svg" alt="angular">
+                </div>
+            </div>
+            <h2>Sprachen</h2>
+            <ul>
+                <li>Deutsch, Muttersprache</li>
+                <li>English, fliessend</li>
+                <li>Französisch, verhandlungssicher</li>
+                <li>Italienisch, Grundkenntnisse</li>
+            </ul>
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Tanzen</li>
+                <li>Jonglieren</li>
+                <li>Schwimmen</li>
+                <li>Gamen</li>
+            </ul>
         </section>
-        <div class="parallax-container">
-            <div id="second-parallax" class="parallax-image"></div>
-        </div>
+        <img class="divider one" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="cv">
-            <h1>Curriculum Vitae</h1>
+            <h2>Curriculum Vitae</h2>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div class="tl-title">Software Engineer</div>
+                    <div class="location-dates">
+                        <div class="tl-location">Berner Fachhochschule</div>
+                        <div class="spacer"></div>
+                        <div class="tl-dates">2022 - Heute</div>
+                    </div>
+                    <div class="tl-description">
+                        <span>Webentwicklung</span>
+                        <ul>
+                            <li>OSS Directory</li>
+                            <li>Support bei Vorlesungen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="tl-title">Software Engineer</div>
+                    <div class="location-dates">
+                        <div class="tl-location">Forschungsstelle Digitale Nachhaltigkeit</div>
+                        <div class="spacer"></div>
+                        <div class="tl-dates">2019 - 2022</div>
+                    </div>
+                    <div class="tl-description">
+                        <span>Webentwicklung</span>
+                        <ul>
+                            <li>Resource Impact Dashboard</li>
+                            <li>Nachhaltiges Immobilienmanagement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="tl-title">Junior Software Engineer</div>
+                    <div class="location-dates">
+                        <div class="tl-location">Bedag Informatik AG</div>
+                        <div class="spacer"></div>
+                        <div class="tl-dates">2017 - 2019</div>
+                    </div>
+                    <div class="tl-description">
+                        <span>Arbeit and Firmeninternen Projekten</span>
+                        <ul>
+                            <li>Grundbuchverwaltungsapplikation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="tl-title">Lehre Softwareentwickler</div>
+                    <div class="location-dates">
+                        <div class="tl-location">Bedag Informatik AG</div>
+                        <div class="spacer"></div>
+                        <div class="tl-dates">2015 - 2017</div>
+                    </div>
+                    <div class="tl-description">
+                        <span>Grundausbildung:</span>
+                        <ul>
+                            <li>HTML/CSS Tetris</li>
+                            <li>Datenbank-Anonymisierer</li>
+                            <li>Einführung Webentwicklung</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="parallax-container">
-            <div id="third-parallax" class="parallax-image"></div>
-        </div>
+        <img class="divider two" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="portfolio">
             <h1>Portfolio</h1>
+            <div class="imgLoader"></div>
+            <div class="container">
+                <div class="book">
+                    <div class="gap"></div>
+                    <div class="pages">
+                        <div class="page"></div>
+                        <div class="page"></div>
+                        <div class="page"></div>
+                        <div class="page"></div>
+                        <div class="page"></div>
+                        <div class="page"></div>
+                    </div>
+                    <div class="flips">
+                        <div class="flip flip1">
+                            <div class="flip flip2">
+                                <div class="flip flip3">
+                                    <div class="flip flip4">
+                                        <div class="flip flip5">
+                                            <div class="flip flip6">
+                                                <div class="flip flip7"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="parallax-container">
-            <div id="fourth-parallax" class="parallax-image"></div>
-        </div>
+        <img class="divider three" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="contact">
             <h1>Kontakt</h1>
+            <div>
+                <span>Patrick Brunner</span>
+            </div>
+            <div>
+                <span>+41 12 345 67 89</span>
+            </div>
+            <div>
+                <span><a href="mailto://noreply@bfh.ch">noreply@bfh.ch</a></span>
+            </div>
+            <div>
+                <span>Fantasiaweg 42</span>
+            </div>
+            <div>
+                <span>3005 Bern</span>
+            </div>
         </section>
     </main>
+
 </div>
 <script>
-    let offset
-    window.addEventListener('scroll', () => {
-        let parallaxContainers = document.getElementsByClassName('parallax-container');
-        for (let container of parallaxContainers) {
-            let yPos = container.getBoundingClientRect().top
-            let height = container.clientHeight
-            let child = container.children[0]
-            child.style.height = window.innerHeight + height;
-            child.style.top = yPos / 2;
-        }
-        let nav = document.getElementsByTagName("nav")[0];
-        let navref = document.getElementById('navref')
-        let svgs = document.getElementsByClassName('svg');
+    document.getElementById('small-screen-nav').addEventListener('click', handleSmallNav)
 
-        if (window.scrollY > navref.offsetTop) {
-            offset = window.scrollY
-            nav.classList.add("sticky");
-            for (let svg of svgs) {
-                svg.style.stroke = '#000'
-                svg.style.fill = '#000'
-            }
-        } else {
-            nav.classList.remove("sticky");
-            for (let svg of svgs) {
-                svg.style.stroke = '#FFF3E2'
-                svg.style.fill = '#FFF3E2'
-            }
+    async function handleSmallNav() {
+        const options = document.getElementsByClassName('small-nav-option')
+        let pos = -8
+        let color = 50
+        for (let option of options) {
+            option.style.top = `${pos}rem`
+            option.style.width ? option.style.width = null : option.style.width = '4rem';
+            await new Promise(r => setTimeout(r, 100));
+            color += 50
+            pos += 4
         }
-    })
+        for (let option of options) {
+            option.style.transition = 'width 0.2s ease-in-out, background 2s'
+        }
+    }
+
 </script>
 </body>
+</html>
