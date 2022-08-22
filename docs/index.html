@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta charset="UTF-8"/>
+    <title>Webdesign Example</title>
 </head>
-<body>    <nav id="small-screen-nav">
+<body>
+<nav id="small-screen-nav">
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
         <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/>
     </svg>
@@ -45,7 +47,7 @@
     </a>
 </nav>
 <div id="navref"></div>
-<nav id="main-nav" >
+<nav id="main-nav">
     <a href="#home">
         <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
             <path d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"/>
@@ -78,7 +80,6 @@
     </a>
 </nav>
 <div class="not-body">
-
     <div class="home-parallax-container">
         <div id="first" class="home-parallax"></div>
         <div id="second" class="home-parallax"></div>
@@ -90,52 +91,135 @@
         <div id="seventh" class="home-parallax"></div>
         <div id="eighth" class="home-parallax"></div>
     </div>
-
     <div class="credits">
         <a href="https://pixabay.com/users/moinzon-2433302/">© Image by Moinzon</a>
     </div>
     <main>
         <section id="home">
-            <div class="home-content">
-                <div class="flex-spacer"></div>
-                <div class="flex-spacer"></div>
-                <div class="flex-spacer"></div>
-                <div class="flex-spacer"></div>
-            </div>
         </section>
         <section id="profile">
-            <h1>Profil</h1>
-            <img src="assets/website-gradient-small.jpg" alt="profilbild">
+            <h2>Über mich</h2>
             <p>Begeisterter Software Entwickler mit Liebe zum Detail.</p>
-            <div class="skills">
-                <h2>Skills</h2>
-                <div class="icon-container">
-                    <img src="assets/angular.svg" alt="angular">
-                    <img src="assets/typescript.svg" alt="angular">
-                    <img src="assets/javascript.svg" alt="angular">
-                    <img src="assets/html.svg" alt="angular">
-                    <img src="assets/css.svg" alt="angular">
-                    <img src="assets/photoshop.svg" alt="angular">
-                    <img src="assets/intellij.svg" alt="angular">
-                    <img src="assets/git.svg" alt="angular">
-                    <img src="assets/c-sharp.svg" alt="angular">
-                    <img src="assets/steam.svg" alt="angular">
-                </div>
+            <img id="profilbild" src="assets/website-gradient-small.jpg" alt="profilbild">
+            <div class="skills list">
+                <h3>Skills</h3>
+                <ul class="icon-container">
+                    <li>
+                        <img src="assets/angular.svg" alt="angular">
+                        <span>
+                            Angular
+                        </span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 90%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                       <img src="assets/typescript.svg" alt="typescript">
+                        <span>
+                            Typescript
+                        </span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 80%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/javascript.svg" alt="javascript">
+                        <span>
+                            Javascript
+                        </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 92%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/html.svg" alt="html">
+                        <span>
+                            HTML
+                        </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 100%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/css.svg" alt="css">
+                        <span>
+                            CSS
+                        </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 70%" ></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <h2>Sprachen</h2>
-            <ul>
-                <li>Deutsch, Muttersprache</li>
-                <li>English, fliessend</li>
-                <li>Französisch, verhandlungssicher</li>
-                <li>Italienisch, Grundkenntnisse</li>
-            </ul>
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Tanzen</li>
-                <li>Jonglieren</li>
-                <li>Schwimmen</li>
-                <li>Gamen</li>
-            </ul>
+            <div class="languages list">
+                <h3>Sprachen</h3>
+                <ul class="icon-container languages">
+                    <li>
+                        <img src="assets/germany.svg" alt="german">
+                        <span>Deutsch</span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 99%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/britain.svg" alt="english">
+                        <span>English</span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 99%" ></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/france.svg" alt="french">
+                        <span>Französisch</span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 66%" ></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="assets/italy.svg" alt="italian">
+                        <span>Italienisch</span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 33%" ></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hobbies list">
+                <h3>Hobbies</h3>
+                <ul class="icon-container hobbies">
+                    <li>
+                        <img src="assets/dance.svg">
+                        <span>Tanzen</span>
+                    </li>
+                    <li>
+                        <img src="assets/juggling.svg">
+                        <span>Jonglieren</span>
+                    </li>
+                    <li>
+                        <img src="assets/swimming.svg">
+                        <span>Schwimmen</span>
+                    </li>
+                    <li>
+                        <img src="assets/gaming.svg">
+                        <span>Gamen</span>
+                    </li>
+                </ul>
+            </div>
         </section>
         <img class="divider one" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="cv">
@@ -159,7 +243,7 @@
                 <div class="timeline-entry">
                     <div class="tl-title">Software Engineer</div>
                     <div class="location-dates">
-                        <div class="tl-location">Forschungsstelle Digitale Nachhaltigkeit</div>
+                        <div class="tl-location">Universität Bern</div>
                         <div class="spacer"></div>
                         <div class="tl-dates">2019 - 2022</div>
                     </div>
@@ -205,7 +289,7 @@
         </section>
         <img class="divider two" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="portfolio">
-            <h1>Portfolio</h1>
+            <h2>Portfolio</h2>
             <div class="imgLoader"></div>
             <div class="container">
                 <div class="book">
@@ -238,7 +322,7 @@
         </section>
         <img class="divider three" src="assets/parallax/natural-4821583.svg" alt="">
         <section id="contact">
-            <h1>Kontakt</h1>
+            <h2>Kontakt</h2>
             <div>
                 <span>Patrick Brunner</span>
             </div>
