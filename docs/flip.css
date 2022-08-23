@@ -9,19 +9,19 @@
 
 @keyframes preLoad {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');;
     }
     10% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
     }
     20% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
     }
     30% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
     }
     40% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
     }
     100% {
         display: none;
@@ -31,20 +31,10 @@
 .container {
     position: relative;
     width: 420px;
-    border: #fff solid 2px;
-    border-radius: 4px;
     height: 420px;
 }
 
-.title {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 100%;
-    font-size: 2em;
-    font-weight: normal;
-    line-height: 1;
-}
+
 
 .credit {
     position: absolute;
@@ -58,7 +48,7 @@
     position: relative;
     perspective: 630px;
     perspective-origin: center 50px;
-    transform: scale(1.2);
+    transform: scale(0.8);
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.25));
 }
 
@@ -120,19 +110,19 @@
 
 @keyframes nextPage {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
     }
 }
 
@@ -260,62 +250,61 @@
 @keyframes nextFlip1 {
     0% {
 
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -178px -2px;
         transform: rotateY(0deg);
     }
     10% {
 
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -210px -2px;
         transform: rotateY(180deg);
     }
     20% {
 
-        background-image: url('assets/rid.png');
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -178px -2px;
         transform: rotateY(0deg);
     }
     30% {
 
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -210px -2px;
         transform: rotateY(180deg);
     }
     40% {
 
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -178px -2px;
         transform: rotateY(0deg);
     }
     50% {
 
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -210px -2px;
         transform: rotateY(180deg);
     }
     60% {
 
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -178px -2px;
         transform: rotateY(0deg);
     }
     70% {
 
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -210px -2px;
         transform: rotateY(180deg);
     }
     80% {
 
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -178px -2px;
         transform: rotateY(0deg);
     }
     90% {
 
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -210px -2px;
         transform: rotateY(180deg);
     }
@@ -324,61 +313,61 @@
 @keyframes nextFlip2 {
     0% {
 
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -148px -2px;
         transform: rotateY(0deg);
     }
     10.5% {
 
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -238px -2px;
         transform: rotateY(180deg);
     }
     20% {
 
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -148px -2px;
         transform: rotateY(0deg);
     }
     30.5% {
 
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -238px -2px;
         transform: rotateY(180deg);
     }
     40% {
 
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -148px -2px;
         transform: rotateY(0deg);
     }
     50.5% {
 
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -238px -2px;
         transform: rotateY(180deg);
     }
     60% {
 
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -148px -2px;
         transform: rotateY(0deg);
     }
     70.5% {
 
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -238px -2px;
         transform: rotateY(180deg);
     }
     80% {
 
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -148px -2px;
         transform: rotateY(0deg);
     }
     90.5% {
 
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -238px -2px;
         transform: rotateY(180deg);
     }
@@ -386,52 +375,52 @@
 
 @keyframes nextFlip3 {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -118px -2px;
         transform: rotateY(0deg);
     }
     11% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -268px -2px;
         transform: rotateY(180deg);
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -118px -2px;
         transform: rotateY(0deg);
     }
     31% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -268px -2px;
         transform: rotateY(180deg);
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -118px -2px;
         transform: rotateY(0deg);
     }
     51% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -268px -2px;
         transform: rotateY(180deg);
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -118px -2px;
         transform: rotateY(0deg);
     }
     71% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -268px -2px;
         transform: rotateY(180deg);
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -118px -2px;
         transform: rotateY(0deg);
     }
     91% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -268px -2px;
         transform: rotateY(180deg);
     }
@@ -439,52 +428,52 @@
 
 @keyframes nextFlip4 {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -88px -2px;
         transform: rotateY(0deg);
     }
     11.5% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -298px -2px;
         transform: rotateY(180deg);
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -88px -2px;
         transform: rotateY(0deg);
     }
     31.5% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -298px -2px;
         transform: rotateY(180deg);
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -88px -2px;
         transform: rotateY(0deg);
     }
     51.5% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -298px -2px;
         transform: rotateY(180deg);
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -88px -2px;
         transform: rotateY(0deg);
     }
     71.5% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -298px -2px;
         transform: rotateY(180deg);
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -88px -2px;
         transform: rotateY(0deg);
     }
     91.5% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -298px -2px;
         transform: rotateY(180deg);
     }
@@ -492,52 +481,52 @@
 
 @keyframes nextFlip5 {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -58px -2px;
         transform: rotateY(0deg);
     }
     12% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -328px -2px;
         transform: rotateY(180deg);
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -58px -2px;
         transform: rotateY(0deg);
     }
     32% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -328px -2px;
         transform: rotateY(180deg);
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -58px -2px;
         transform: rotateY(0deg);
     }
     52% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -328px -2px;
         transform: rotateY(180deg);
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -58px -2px;
         transform: rotateY(0deg);
     }
     72% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -328px -2px;
         transform: rotateY(180deg);
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -58px -2px;
         transform: rotateY(0deg);
     }
     92% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -328px -2px;
         transform: rotateY(180deg);
     }
@@ -545,52 +534,52 @@
 
 @keyframes nextFlip6 {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -28px -2px;
         transform: rotateY(0deg);
     }
     12.5% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -358px -2px;
         transform: rotateY(180deg);
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -28px -2px;
         transform: rotateY(0deg);
     }
     32.5% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -358px -2px;
         transform: rotateY(180deg);
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -28px -2px;
         transform: rotateY(0deg);
     }
     52.5% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -358px -2px;
         transform: rotateY(180deg);
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -28px -2px;
         transform: rotateY(0deg);
     }
     72.5% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -358px -2px;
         transform: rotateY(180deg);
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -28px -2px;
         transform: rotateY(0deg);
     }
     92.5% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -358px -2px;
         transform: rotateY(180deg);
     }
@@ -598,69 +587,59 @@
 
 @keyframes nextFlip7 {
     0% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -2px -2px;
         transform: rotateY(0deg);
     }
     13% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -388px -2px;
         transform: rotateY(180deg);
     }
     20% {
-        background-image: url('assets/rid.png');
+        background-image: url('assets/lion.jpg');
         background-position: -2px -2px;
         transform: rotateY(0deg);
     }
     33% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -388px -2px;
         transform: rotateY(180deg);
     }
     40% {
-        background-image: url('assets/mychapter.png');
+        background-image: url('assets/plant.jpg');
         background-position: -2px -2px;
         transform: rotateY(0deg);
     }
     53% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -388px -2px;
         transform: rotateY(180deg);
     }
     60% {
-        background-image: url('assets/pokemon-box.png');
+        background-image: url('assets/desert.jpg');
         background-position: -2px -2px;
         transform: rotateY(0deg);
     }
     73% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -388px -2px;
         transform: rotateY(180deg);
     }
     80% {
-        background-image: url('assets/osa.png');
+        background-image: url('assets/sea.jpg');
         background-position: -2px -2px;
         transform: rotateY(0deg);
     }
     93% {
-        background-image: url('assets/example-website.png');
+        background-image: url('assets/mountain.jpg');
         background-position: -388px -2px;
         transform: rotateY(180deg);
     }
 }
 
-.twitterLink {
-    position: fixed;
-    bottom: 0.5em;
-    right: 0.5em;
-}
-
-.twitterLink img {
-    width: 2em;
-    filter: grayscale(100%);
-    transition: filter 0.25s;
-}
-
-.twitterLink img:hover {
-    filter: grayscale(0%);
+@media (min-width: 768px) {
+    .book {
+        transform: scale(1.8);
+    }
 }

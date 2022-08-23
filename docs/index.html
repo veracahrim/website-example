@@ -3,6 +3,9 @@
 <head>
     <link href="flip.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
+    <link href="cv.css" rel="stylesheet">
+    <link href="contact.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
@@ -79,7 +82,7 @@
         <span>KONTAKT</span>
     </a>
 </nav>
-<div class="not-body">
+<div class="wrapper">
     <div class="home-parallax-container">
         <div id="first" class="home-parallax"></div>
         <div id="second" class="home-parallax"></div>
@@ -221,11 +224,11 @@
                 </ul>
             </div>
         </section>
-        <img class="divider one" src="assets/parallax/natural-4821583.svg" alt="">
+        <img class="divider one" src="assets/layered-peaks-haikei.svg" alt="">
         <section id="cv">
             <h2>Curriculum Vitae</h2>
             <div class="timeline">
-                <div class="timeline-entry">
+                <div class="timeline-entry right">
                     <div class="tl-title">Software Engineer</div>
                     <div class="location-dates">
                         <div class="tl-location">Berner Fachhochschule</div>
@@ -240,7 +243,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-entry">
+                <div class="timeline-entry left">
                     <div class="tl-title">Software Engineer</div>
                     <div class="location-dates">
                         <div class="tl-location">Universität Bern</div>
@@ -255,7 +258,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-entry">
+                <div class="timeline-entry right" >
                     <div class="tl-title">Junior Software Engineer</div>
                     <div class="location-dates">
                         <div class="tl-location">Bedag Informatik AG</div>
@@ -269,7 +272,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-entry">
+                <div class="timeline-entry left">
                     <div class="tl-title">Lehre Softwareentwickler</div>
                     <div class="location-dates">
                         <div class="tl-location">Bedag Informatik AG</div>
@@ -287,7 +290,7 @@
                 </div>
             </div>
         </section>
-        <img class="divider two" src="assets/parallax/natural-4821583.svg" alt="">
+        <img class="divider two" src="assets/layered-peaks-haikei.svg" alt="">
         <section id="portfolio">
             <h2>Portfolio</h2>
             <div class="imgLoader"></div>
@@ -320,41 +323,30 @@
                 </div>
             </div>
         </section>
-        <img class="divider three" src="assets/parallax/natural-4821583.svg" alt="">
+        <img class="divider three" src="assets/layered-peaks-haikei.svg" alt="">
         <section id="contact">
             <h2>Kontakt</h2>
-            <div>
-                <span>Patrick Brunner</span>
-            </div>
-            <div>
-                <span>+41 12 345 67 89</span>
-            </div>
-            <div>
-                <span><a href="mailto://noreply@bfh.ch">noreply@bfh.ch</a></span>
-            </div>
-            <div>
-                <span>Fantasiaweg 42</span>
-            </div>
-            <div>
-                <span>3005 Bern</span>
-            </div>
+            <input id="name" placeholder="Name" type="text">
+            <input id="email" placeholder="E-Mail Adresse" type="email">
+            <input id="betreff" placeholder="Betreff"  type="text">
+            <textarea id="message" placeholder="Nachricht"></textarea>
         </section>
     </main>
 
 </div>
 <script>
     document.getElementById('small-screen-nav').addEventListener('click', handleSmallNav)
-
     async function handleSmallNav() {
         const options = document.getElementsByClassName('small-nav-option')
-        let pos = -8
-        let color = 50
+        let pos = 0
+        let z = -1
         for (let option of options) {
-            option.style.top = `${pos}rem`
+            option.style.bottom = `${pos}rem`
+            option.style.zIndex = `${z}`
+            z--
             option.style.width ? option.style.width = null : option.style.width = '4rem';
             await new Promise(r => setTimeout(r, 100));
-            color += 50
-            pos += 4
+            pos += 4.5
         }
         for (let option of options) {
             option.style.transition = 'width 0.2s ease-in-out, background 2s'

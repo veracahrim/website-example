@@ -1,6 +1,6 @@
-<svg id="visual" viewBox="0 0 4000 2000" width="4000" height="2000" xmlns="http://www.w3.org/2000/svg"
+<svg id="visual" viewBox="0 0 600 420" width="600" height="420" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-    <rect x="0" y="0" width="4000" height="2000" fill="#302A3A"></rect>
+    <rect x="0" y="0" width="600" height="420" fill="#302A3A"></rect>
     <g fill="#FFF3E2">
         <path d="M0 -48.1L10.8 -14.9L45.8 -14.9L17.5 5.7L28.3 38.9L0 18.4L-28.3 38.9L-17.5 5.7L-45.8 -14.9L-10.8 -14.9Z"
               transform="translate(1857 995)"></path>

@@ -1,0 +1,77 @@
+#contact {
+    gap: 0.8em;
+    justify-content: flex-start;
+}
+
+#contact h2 {
+    margin: 0.6em 0;
+}
+
+#contact input {
+    border: 1px solid #999;
+    background: transparent;
+    width: 60vw;
+    padding: 0.5em;
+}
+
+#contact textarea:focus,
+#contact input:focus {
+    outline: none;
+    border: 1px solid #FFF3E2;
+}
+
+#contact textarea::placeholder,
+#contact input::placeholder {
+    color: #FFF3E299;
+}
+
+#contact textarea {
+    border: 1px solid #FFF3E299;
+    background: transparent;
+    width: 60vw;
+    padding: 0.5em;
+    min-height: 200px;
+    resize: vertical;
+}
+
+@media (min-width: 768px) {
+    #contact {
+        display: grid;
+        grid-template: '. header header .'
+                        '. name email .'
+                        '. betreff betreff .'
+                        '. message message .';
+        grid-template-rows: 5em 4em 4em 50vh;
+        grid-template-columns: 1fr 400px 400px  1fr;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    #contact textarea,
+    #contact input {
+        font-size: 18px;
+        padding: 1em;
+        width: unset;
+    }
+
+    #contact h2 {
+        justify-self: center;
+        grid-area: header;
+    }
+
+    #contact #name {
+        grid-area: name;
+    }
+
+    #contact #email {
+        grid-area: email;
+    }
+
+    #contact #betreff {
+        grid-area: betreff;
+    }
+
+    #contact #message {
+        grid-area: message;
+    }
+}

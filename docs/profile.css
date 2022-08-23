@@ -1,0 +1,181 @@
+
+#profile::before {
+    content: '';
+    z-index: -1;
+    /*background: red;*/
+    transform: scaleY(1.4);
+    background: var(--color-background-gradient);
+    filter:blur(20px);
+    opacity: 1;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: -1em;
+    right: -5em;
+    left: -5em;
+    bottom: 90%;
+}
+
+#profile {
+    scroll-margin-top: -9em;
+    position: relative;
+    background: var(--color-background-left);
+    background: var(--color-background-gradient);
+    color: var(--color-main);
+    align-items: center;
+    padding-top: 10em;
+    z-index: 2;
+}
+
+#profile h1 {
+    width: 100%;
+    color: var(--color-main);
+}
+
+#profile img {
+    place-self: center;
+    object-fit: cover;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-width: 70vw;
+}
+
+.icon-container {
+    padding: 0 1em;
+}
+
+.icon-container li {
+    gap: 1em;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    place-items: center;
+}
+
+.icon-container li img {
+    width: 32px;
+}
+
+.languages li{
+    margin-bottom: 5px;
+}
+
+
+#profilbild {
+    max-width: 70vw;
+}
+
+.progress-bar {
+    position: relative;
+    height: 0.7em;
+    width: 10em;
+}
+
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color-burn;
+    background-color: #FFF3E2;
+}
+
+.progress-bar-fill {
+    position: relative;
+    height: 100%;
+    width: 0;
+    background-color: #FFF3E2;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.hobbies li {
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width: 768px) {
+    #profile {
+        display: grid;
+        gap: 2em 1em;
+        grid-template: '. header header header .'
+                        '. . . . .'
+                        '. text . image .'
+                        '. skills . image .'
+                        '. languages  . hobbies  .';
+        grid-template-columns: 1fr auto 2em auto 1fr;
+        grid-template-rows: 3em 6em 2em fit-content(10vh) minmax( 300px, 20vh);
+    }
+    #profile h2 {
+        grid-area: header;
+    }
+
+    #profile p {
+        grid-area: text;
+    }
+
+    #profile img {
+        grid-area: image;
+        place-self: start;
+    }
+
+    #profile .skills {
+        grid-area: skills;
+    }
+
+    #profile .languages {
+        grid-area: languages;
+        align-self: start;
+    }
+
+    #profile .hobbies {
+        max-width: 20vw;
+        place-self: start;
+        justify-self: center;
+        grid-area: hobbies;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #profile .hobbies ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+    }
+
+    #profile .hobbies img {
+        min-width: 32px;
+    }
+
+    #profile .languages {
+    }
+
+    #profile .hobbies li {
+        max-width: 100%;
+        flex-basis: 50%;
+        flex-shrink: 0;
+        flex-direction: row;
+    }
+
+    .list {
+        min-width: 0;
+    }
+}
+
