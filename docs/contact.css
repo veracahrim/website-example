@@ -34,15 +34,33 @@
     resize: vertical;
 }
 
+#contact button {
+    grid-area: button;
+    background: #fff1;
+    border: 1px solid #FFF3E299;
+    transition: background 1s ease;
+}
+
+#contact button:hover {
+    cursor: pointer;
+    background: #fff2;
+}
+
+#contact button:active {
+    transition: background 0.1s ease;
+    background: #fff3;
+}
+
 @media (min-width: 768px) {
     #contact {
         display: grid;
         grid-template: '. header header .'
                         '. name email .'
                         '. betreff betreff .'
-                        '. message message .';
-        grid-template-rows: 5em 4em 4em 50vh;
-        grid-template-columns: 1fr 400px 400px  1fr;
+                        '. message message .'
+                        '. button . . ';
+        grid-template-rows: 5em 4em 4em 50vh 4em;
+        grid-template-columns: 1fr 400px 400px 1fr;
         justify-items: stretch;
         align-items: stretch;
     }
