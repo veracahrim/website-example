@@ -24,6 +24,11 @@ body {
     overflow-x: hidden;
 }
 
+#top {
+    position: absolute;
+    top: -100vh;
+}
+
 .wrapper {
     scroll-behavior: smooth;
     min-height: 100vh;
