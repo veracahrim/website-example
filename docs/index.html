@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="de">
 <head>
-    <link href="flip.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <link href="profile.css" rel="stylesheet">
-    <link href="cv.css" rel="stylesheet">
     <link href="contact.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+    <link href="cv.css" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta charset="UTF-8"/>
-    <title>Webdesign Example</title>
 </head>
 <body>
 <nav id="small-screen-nav">
@@ -87,7 +81,7 @@
         <div id="first" class="home-parallax"></div>
         <div id="second" class="home-parallax"></div>
         <div id="third" class="home-parallax"></div>
-        <h1 id="title" class="home-parallax">Webdesign Example</h1>
+        <h1 id="title" class="home-parallax"><span>Webdesign Example</span></h1>
         <div id="fourth" class="home-parallax"></div>
         <div id="fifth" class="home-parallax"></div>
         <div id="sixth" class="home-parallax"></div>
@@ -98,8 +92,6 @@
         <a href="https://pixabay.com/users/moinzon-2433302/">© Image by Moinzon</a>
     </div>
     <main>
-        <section id="home">
-        </section>
         <section id="profile">
             <h2>Über mich</h2>
             <p>Begeisterter Software Entwickler mit Liebe zum Detail.</p>
@@ -110,54 +102,54 @@
                     <li>
                         <img src="assets/angular.svg" alt="angular">
                         <span>
-                            Angular
-                        </span>
+                        Angular
+                    </span>
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 90%" ></div>
+                            <div class="progress-bar-fill" style="width: 90%"></div>
                         </div>
                     </li>
                     <li>
-                       <img src="assets/typescript.svg" alt="typescript">
+                        <img src="assets/typescript.svg" alt="typescript">
                         <span>
-                            Typescript
-                        </span>
+                        Typescript
+                    </span>
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 80%" ></div>
+                            <div class="progress-bar-fill" style="width: 80%"></div>
                         </div>
                     </li>
                     <li>
                         <img src="assets/javascript.svg" alt="javascript">
                         <span>
-                            Javascript
-                        </span>
+                        Javascript
+                    </span>
 
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 92%" ></div>
+                            <div class="progress-bar-fill" style="width: 92%"></div>
                         </div>
                     </li>
                     <li>
                         <img src="assets/html.svg" alt="html">
                         <span>
-                            HTML
-                        </span>
+                        HTML
+                    </span>
 
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 100%" ></div>
+                            <div class="progress-bar-fill" style="width: 100%"></div>
                         </div>
                     </li>
                     <li>
                         <img src="assets/css.svg" alt="css">
                         <span>
-                            CSS
-                        </span>
+                        CSS
+                    </span>
 
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 70%" ></div>
+                            <div class="progress-bar-fill" style="width: 70%"></div>
                         </div>
                     </li>
                 </ul>
@@ -170,7 +162,7 @@
                         <span>Deutsch</span>
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 99%" ></div>
+                            <div class="progress-bar-fill" style="width: 99%"></div>
                         </div>
                     </li>
                     <li>
@@ -179,7 +171,7 @@
 
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 99%" ></div>
+                            <div class="progress-bar-fill" style="width: 99%"></div>
                         </div>
                     </li>
                     <li>
@@ -188,7 +180,7 @@
 
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 66%" ></div>
+                            <div class="progress-bar-fill" style="width: 66%"></div>
                         </div>
                     </li>
 
@@ -197,7 +189,7 @@
                         <span>Italienisch</span>
                         <div class="flex-spacer"></div>
                         <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 33%" ></div>
+                            <div class="progress-bar-fill" style="width: 33%"></div>
                         </div>
                     </li>
                 </ul>
@@ -224,7 +216,9 @@
                 </ul>
             </div>
         </section>
-        <img class="divider one" src="assets/layered-peaks-haikei.svg" alt="">
+        <div class="parallax-container">
+            <img class="divider one" src="assets/layered-peaks-haikei.svg" alt="">
+        </div>
         <section id="cv">
             <h2>Curriculum Vitae</h2>
             <div class="timeline">
@@ -258,7 +252,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-entry right" >
+                <div class="timeline-entry right">
                     <div class="tl-title">Junior Software Engineer</div>
                     <div class="location-dates">
                         <div class="tl-location">Bedag Informatik AG</div>
@@ -273,7 +267,7 @@
                     </div>
                 </div>
                 <div class="timeline-entry left">
-                    <div class="tl-title">Lehre Softwareentwickler</div>
+                    <div class="tl-title">Lehre Software Engineer</div>
                     <div class="location-dates">
                         <div class="tl-location">Bedag Informatik AG</div>
                         <div class="spacer"></div>
@@ -290,7 +284,9 @@
                 </div>
             </div>
         </section>
-        <img class="divider two" src="assets/layered-peaks-haikei.svg" alt="">
+        <div class="parallax-container">
+            <img class="divider two" src="assets/layered-peaks-haikei.svg" alt="">
+        </div>
         <section id="portfolio">
             <h2>Portfolio</h2>
             <div class="imgLoader"></div>
@@ -323,7 +319,9 @@
                 </div>
             </div>
         </section>
-        <img class="divider three" src="assets/layered-peaks-haikei.svg" alt="">
+        <div class="parallax-container">
+            <img class="divider three" src="assets/layered-peaks-haikei.svg" alt="">
+        </div>
         <section id="contact">
             <h2>Kontakt</h2>
             <input id="name" placeholder="Name" type="text">
@@ -333,10 +331,33 @@
             <button>Senden</button>
         </section>
     </main>
-
 </div>
+
 <script>
+    wrapper = document.getElementsByClassName('wrapper')[0]
+    wrapper.addEventListener('scroll', () => {
+        addStickyClasses();
+        let parallaxContainers = document.getElementsByClassName('parallax-container');
+        for(let container of parallaxContainers) {
+            let yPos = container.getBoundingClientRect().top
+            console.log(yPos)
+            let child = container.children[0]
+            child.style.top = - yPos / 2;
+        }
+    })
+
+    function addStickyClasses() {
+        let nav = document.getElementById("main-nav")
+        let navref = document.getElementById('navref')
+        if (window.scrollY > navref.offsetTop) {
+            nav.classList.add("sticky");
+        } else {
+            nav.classList.remove("sticky");
+        }
+    }
+
     document.getElementById('small-screen-nav').addEventListener('click', handleSmallNav)
+
     async function handleSmallNav() {
         const options = document.getElementsByClassName('small-nav-option')
         let pos = 0
@@ -356,4 +377,3 @@
 
 </script>
 </body>
-</html>

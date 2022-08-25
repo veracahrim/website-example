@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 :root {
     --color-main: #FFF3E2;
     --color-accent: #a29ac5;
@@ -13,11 +6,12 @@
     --color-background-middle: #41415C;
     --color-background-right: #332D3D;
     --color-background-gradient: linear-gradient(90deg, var(--color-background-left) 0%, var(--color-background-middle) 50%, var(--color-background-right) 100%);
+
 }
 
 * {
     font-family: Helvetica, sans-serif;
-    color: var(--color-main);
+    color: var(--color-main)
 }
 
 html {
@@ -25,8 +19,8 @@ html {
 }
 
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -34,76 +28,136 @@ body {
     scroll-behavior: smooth;
     min-height: 100vh;
     overflow-x: hidden;
-    -webkit-perspective: 8px;
     perspective: 8px;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
 .credits {
-    z-index: 20;
     position: absolute;
     bottom: 1em;
-    right: 1em;
+    right: 2em;
+    z-index: 3;
 }
 
 .credits a {
-    z-index: 20;
     text-decoration: none;
     color: #99a;
     font-size: 12px;
 }
 
-.heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    place-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
 #main-nav {
-    visibility: hidden;
     margin-left: 3em;
-    position: fixed;
+    position: absolute;
     top: 90vh;
+    z-index: 1;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 1em;
-    z-index: 22;
 }
 
 #main-nav a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     place-items: center;
     text-decoration: none;
 }
 
+#main-nav a span {
+    color: var(--color-main);
+}
+
+#navref {
+    position: absolute;
+    top: 90vh;
+}
+
+#main-nav.sticky {
+    position: fixed;
+    top: 0;
+}
+
+#main-nav.sticky a {
+    text-decoration: none;
+}
+
+main {
+    position: absolute;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background-left);
+}
+
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-darker);
+}
+
+h2 {
+    margin: 1em 0;
+    padding: 0 1em;
+    font-size: 1.5em;
+}
+
 @media (min-width: 768px) {
-    #main-nav {
-        visibility: visible;
+    h1 {
+        font-size: 3.5em;
     }
 
-    #small-screen-nav {
-        visibility: hidden;
+    h2 {
+        font-size: 2.5em;
     }
+}
+
+section {
+    background: var(--color-background-gradient);
+}
+
+
+#small-screen-nav {
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 22;
+    min-width: 64px;
+}
+
+#small-screen-nav a {
+    background: linear-gradient(90deg,
+    var(--color-background-left) 0%,
+    #423445 97%,
+    transparent 100%
+    );
+
+    padding-top: 1em;
+    padding-bottom: 5em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    width: 0;
+    overflow: hidden;
+    left: 0;
+    /*same color as background color with mix-blend-mode: difference results in black*/
+    color: var(--color-main);
+    font-size: 10px;
+    font-family: Calibri, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    transition: width 0.2s ease-in-out;
 }
 
 svg,
@@ -112,80 +166,56 @@ svg,
     fill: #FFF3E2;
 }
 
-main {
+#main-nav {
+    display: none;
+    margin-left: 3em;
     position: absolute;
-    top: 0;
-    max-width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    top: 90vh;
+    width: 100%;
+    gap: 1em;
+    z-index: 22;
+}
+
+#main-nav a {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    place-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    overflow-x: hidden;
-}
-
-main>*{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    padding-top: 1em;
-    font-family: 'Signika', sans-serif;
-}
-
-h1 {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     place-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    font-size: 4em;
-    font-weight: normal;
+    text-decoration: none;
 }
 
-h2 {
-    font-size: 2.5em;
-}
+@media (min-width: 768px) {
+    #main-nav {
+        display: flex;
+    }
 
-h4 {
-    margin: 0;
-    color: var(--color-darker);
+    #small-screen-nav {
+        visibility: hidden;
+    }
 }
 
 .flex-spacer {
-    -webkit-box-flex: 2;
-    -ms-flex: 2 1 auto;
     flex: 2 1 auto;
 }
 
-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    place-items: center;
-    min-height: 100vh;
+.divider {
+    height: 300px;
+    overflow: hidden;
     width: 100vw;
-    background: var(--color-background-gradient);
+    object-fit: cover;
+}
+
+.parallax-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-container img {
+    position: absolute;
+    height: 650px;
+    top: 0;
 }
 
 .home-parallax-container {
@@ -193,13 +223,11 @@ section {
     top: 0;
     height: 100vh;
     width: 100vw;
-    -webkit-transform-style: inherit;
     transform-style: inherit;
     z-index: 1;
 }
 
 .home-parallax {
-    -webkit-transform-style: inherit;
     transform-style: inherit;
     position: absolute;
     top: 0;
@@ -211,193 +239,83 @@ section {
 #first {
     background: url("assets/parallax/mountains-1412683_0008_background.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-8px) scale(2);
     transform: translateZ(-8px) scale(2);
 }
 
 #second {
     background: url("assets/parallax/mountains-1412683_0007_background_1.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-7px) scale(1.875);
     transform: translateZ(-7px) scale(1.875);
 }
 
 #third {
     background: url("assets/parallax/mountains-1412683_0006_background_2.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-6px) scale(1.75);
     transform: translateZ(-6px) scale(1.75);
 }
 
+#title span {
+    color: var(--color-darker)
+}
+
 #title {
-    color: var(--color-darker);
     position: absolute;
     width: 100%;
-    height: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 60%;
     display: flex;
+    justify-content: center;
+    place-items: center;
     font-weight: bolder;
-    -webkit-transform: translateZ(-6px) scale(1.75);
     transform: translateZ(-6px) scale(1.75);
 }
 
 #fourth {
     background: url("assets/parallax/mountains-1412683_0005_background_3.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-5px) scale(1.625);
     transform: translateZ(-5px) scale(1.625);
 }
 
 #fifth {
     background: url("assets/parallax/mountains-1412683_0004_background_4.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-4px) scale(1.5);
     transform: translateZ(-4px) scale(1.5);
 }
 
 #sixth {
     background: url("assets/parallax/mountains-1412683_0003_foreground_2.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-3px) scale(1.375);
     transform: translateZ(-3px) scale(1.375);
 }
 
 #seventh {
     background: url("assets/parallax/mountains-1412683_0002_foreground_1.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-2px) scale(1.25);
     transform: translateZ(-2px) scale(1.25);
 }
 
 #eighth {
     background: url("assets/parallax/mountains-1412683_0000_foreground.png") no-repeat center;
     background-size: cover;
-    -webkit-transform: translateZ(-1px) scale(1.125);
     transform: translateZ(-1px) scale(1.125);
 }
 
-#navref {
+#eighth::after {
+    content: '';
+    z-index: 10;
+    transform:  scaleY(1.4);
+    background: var(--color-background-gradient);
+    filter:blur(20px);
+    opacity: 1;
+    transition: opacity 0.3s;
     position: absolute;
-    top: 90vh;
-}
-
-#small-screen-nav {
-    cursor: pointer;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    place-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    top: 90%;
+    right: -5em;
+    left: -5em;
     bottom: 0;
-    z-index: 22;
-    min-width: 64px;
 }
 
-#small-screen-nav a {
-    background: -webkit-gradient(linear,
-    left top, right top,
-    from(var(--color-background-left)),
-    color-stop(97%, #423445),
-    to(transparent)
-    );
-    background: -o-linear-gradient(left,
-    var(--color-background-left) 0%,
-    #423445 97%,
-    transparent 100%
-    );
-    background: linear-gradient(90deg,
-    var(--color-background-left) 0%,
-    #423445 97%,
-    transparent 100%
-    );
-
-    padding-top: 1em;
-    padding-bottom: 5em;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    place-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 0;
-    overflow: hidden;
-    left: 0;
-    /*same color as background color with mix-blend-mode: difference results in black*/
-    color: var(--color-main);
-    font-size: 10px;
-    font-family: Calibri, sans-serif;
-    text-decoration: none;
-    text-align: center;
-    -webkit-transition: width 0.2s ease-in-out;
-    -o-transition: width 0.2s ease-in-out;
-    transition: width 0.2s ease-in-out;
-}
-
-@media (min-width: 500px) {
-    #small-screen-nav a {
-        background: -webkit-gradient(linear,
-        left top, right top,
-        from(var(--color-background-left)),
-        color-stop(97%, #433140),
-        to(transparent)
-        );
-        background: -o-linear-gradient(left,
-        var(--color-background-left) 0%,
-        #433140 97%,
-        transparent 100%
-        );
-        background: linear-gradient(90deg,
-        var(--color-background-left) 0%,
-        #433140 97%,
-        transparent 100%
-        );
+@media (min-width: 768px) {
+    .parallax-container img {
+        height: 900px;
     }
-}
-
-p {
-    font-family: Helvetica, sans-serif;
-    padding: 0 0 0 1em;
-}
-
-h2 {
-    margin: 1em 0;
-    padding: 0 1em;
-}
-
-#portfolio {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    gap: 3em;
-}
-
-.divider {
-    height: 300px;
-    overflow: hidden;
-    width: 100vw;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
-.divider.one {
-    -o-object-position: top;
-    object-position: top;
-}
-.divider.two {
-    -o-object-position: center;
-    object-position: center;
-}
-.divider.three {
-    -o-object-position: bottom;
-    object-position: bottom;
 }

@@ -1,8 +1,6 @@
-
 #profile::before {
     content: '';
     z-index: -1;
-    /*background: red;*/
     transform: scaleY(1.4);
     background: var(--color-background-gradient);
     filter:blur(20px);
@@ -26,8 +24,9 @@
     z-index: 2;
 }
 
-#profile h1 {
+#profile h2 {
     width: 100%;
+    text-align: center;
     color: var(--color-main);
 }
 
@@ -63,12 +62,12 @@
     margin-bottom: 5px;
 }
 
-
 #profilbild {
     max-width: 70vw;
 }
 
 .progress-bar {
+    align-self: flex-end;
     position: relative;
     height: 0.7em;
     width: 10em;
@@ -106,7 +105,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 
 @media (min-width: 768px) {

@@ -1,5 +1,7 @@
 #contact {
     gap: 0.8em;
+    flex-direction: column;
+    place-items: center;
     justify-content: flex-start;
 }
 
@@ -35,6 +37,7 @@
 }
 
 #contact button {
+    padding: 0.5em 1em;
     grid-area: button;
     background: #fff1;
     border: 1px solid #FFF3E299;
@@ -50,6 +53,7 @@
     transition: background 0.1s ease;
     background: #fff3;
 }
+
 
 @media (min-width: 768px) {
     #contact {
