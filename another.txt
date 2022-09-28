@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 we're doing it
-=======
-different content
->>>>>>> main
