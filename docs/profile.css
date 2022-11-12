@@ -67,7 +67,6 @@
 }
 
 .progress-bar {
-    align-self: flex-end;
     position: relative;
     height: 0.7em;
     width: 10em;
